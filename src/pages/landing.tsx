@@ -27,7 +27,7 @@ const LandingPage = () => {
           <p className="text-lg md:text-xl mb-6">
             Experience seamless conversations with our intelligent AI-powered chatbot.
           </p>
-          <Link to="/signup">
+          <Link to="/login">
             <button className="bg-white text-indigo-500 px-6 py-3 rounded-full text-lg hover:bg-gray-200 transition duration-300">
               Get Started
             </button>
