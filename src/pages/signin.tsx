@@ -12,18 +12,20 @@ export const Signin = function() {
     const [post_inputs, setPost] = useState<Signin_type>({ password: "", email: "" });
     const [error, setError] = useState<string | null>(null);
     //axios.defaults.withCredentials = true;
-    async function send_request() {
+     function send_request() {
         // Validate inputs using SigninSchema
         const validationResult = SigninSchema.safeParse(post_inputs);
 
         if (!validationResult.success) {
             // Handle validation error
-            setError("Please enter a valid email and password.");
+            setError(" invalid email or password(must be atleast 6 character long)");
+            console.log("hi");
             console.error(validationResult.error.errors); // Log detailed errors
             return; // Stop further execution if validation fails
         }
 else{
     setError(null);
+    console.log("hi from else");
     alert("Signed in sucessfully");
     navigate("/chat");
 }
